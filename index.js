@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const port = process.env.PORT || 5000;
 
 let homeContent = "";
 let projectContent = "";
@@ -42,4 +43,4 @@ http.createServer((request, response) => {
             break;
     }
 })
-    .listen(process.env.PORT);
+    .listen(port);
